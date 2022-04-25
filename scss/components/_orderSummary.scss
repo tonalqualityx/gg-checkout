@@ -3,6 +3,7 @@
   padding: 1rem;
   border-radius: $large-radius;
   width: 100%;
+  margin-top: 1.625rem;
 }
 
 .total {
@@ -10,8 +11,20 @@
   justify-content: space-between;
 }
 
-@media screen and (min-width: 768px) {
+.summary h2 {
+  font-weight: 400;
+  text-align: center;
+  color: $text;
+}
+
+.summary h2,
+.summary h3 {
+  font-size: 0.875rem;
+}
+
+@media screen and (min-width: 1000px) {
   .summary {
-    max-width: 266px;
+    flex-direction: column;
+    margin-top: 0;
   }
 }

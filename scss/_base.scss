@@ -5,15 +5,20 @@ $purple: #5c135c;
 $light-purple: #800080;
 $text: #838a8f;
 $light-grey: #f0f2f3;
+$blue: #2e3840;
 
 // Set some radius numbers
 $small-radius: 3px;
 $large-radius: 5px;
 
+// Set other key values
+$column-gutter: 28px;
+$gap: 15px;
+
 // Set the fonts
 html {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   box-sizing: border-box;
 }
 
@@ -25,12 +30,12 @@ html {
 
 h1 {
   text-align: center;
-  font-size: 2.857rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
 h2 {
-  font-size: 1.071rem;
+  font-size: 1.25rem;
 }
 
 p,
@@ -38,7 +43,11 @@ select,
 label,
 ::placeholder {
   color: $text;
-  font-size: 0.7rem;
+  font-size: 0.875rem;
+}
+
+p.small {
+  font-size: 0.813rem;
 }
 
 a {
@@ -55,6 +64,10 @@ a:hover {
 
 .regular {
   font-weight: 400;
+}
+
+.blue-text {
+  color: $blue;
 }
 
 hr {
@@ -86,15 +99,15 @@ hr {
   }
 }
 
-@media screen and (min-width: 1148px) {
+@media screen and (min-width: 1000px) {
   html {
-    font-size: 18.66px;
+    font-size: 16px;
   }
 
   .container {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: $column-gutter;
   }
 
   .col {

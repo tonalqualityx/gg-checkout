@@ -1,10 +1,26 @@
-// TODO get button dimensions in windows
 button {
   background: rgb(241, 126, 0);
   background: linear-gradient(90deg, $orange 0%, $light-orange 100%);
   color: white;
-  font-size: 1.071rem;
-  padding: 0.4025rem 1.071rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  height: 70px;
   border: none;
   border-radius: 50px;
+  text-align: center;
+  position: relative;
+}
+
+button i.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
 }

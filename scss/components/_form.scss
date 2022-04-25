@@ -33,7 +33,7 @@ select:focus {
 }
 
 select {
-  background-color: transparent;
+  background-color: white;
 }
 
 .accessible-only {
@@ -67,11 +67,30 @@ fieldset.checkboxes {
   border-radius: $large-radius;
 }
 
+.checkboxes i {
+  visibility: hidden;
+  background: $orange;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  color: white;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100%;
+}
+
+.checkboxes .checked i {
+  visibility: visible;
+}
+
 // TODO get the circle color
 input[type="radio"] {
   appearance: none;
   background-color: transparent;
   margin: 0;
+  margin-right: 0.875rem;
   font: inherit;
   color: currentColor;
   width: 20px;
@@ -94,7 +113,7 @@ fieldset.expiration label {
   form {
     display: flex;
     justify-content: flex-start;
-    gap: 10px;
+    gap: $column-gutter;
   }
 
   fieldset {
@@ -124,5 +143,11 @@ fieldset.expiration label {
 
   fieldset.address label:nth-child(2) {
     flex-grow: 999;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  fieldset {
+    max-width: 266px;
   }
 }
