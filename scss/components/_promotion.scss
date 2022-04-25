@@ -1,0 +1,17 @@
+.promotion {
+  display: flex;
+  gap: 10px;
+  background: linear-gradient(90deg, $purple 0%, $light-purple 100%);
+  border-radius: $large-radius;
+  padding: 0.7rem;
+}
+
+.promotion p {
+  color: white;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.promotion p:first-child {
+  margin: 0 0 0.4025rem;
+}

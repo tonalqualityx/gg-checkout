@@ -1,0 +1,128 @@
+// Style the form elements!
+
+form h2 {
+  margin: 5px 0 0;
+}
+
+form p {
+  margin: 5px 0;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  border: none;
+  padding: 0;
+}
+
+input,
+select {
+  height: 50px;
+  border-radius: $small-radius;
+  border: 1px solid #c9d2d8;
+  padding-left: 16px;
+  width: 100%;
+  margin: 0;
+}
+
+input:focus,
+select:focus {
+  outline-color: $light-orange;
+}
+
+select {
+  background-color: transparent;
+}
+
+.accessible-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+fieldset.checkboxes {
+  background: $light-grey;
+  border-radius: $large-radius;
+  margin: 0;
+}
+
+.checkboxes label {
+  height: 55px;
+  font-weight: bold;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  padding: 16px;
+}
+
+.checkboxes label.checked {
+  border: 2px solid $orange;
+  border-radius: $large-radius;
+}
+
+// TODO get the circle color
+input[type="radio"] {
+  appearance: none;
+  background-color: transparent;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 20px;
+  height: 20px;
+  border: 0.15em solid $text;
+  border-radius: 50%;
+}
+
+fieldset.expiration {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+fieldset.expiration label {
+  width: 32%;
+}
+
+@media screen and (min-width: 768px) {
+  form {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  fieldset {
+    max-width: 266px;
+  }
+
+  fieldset.user-info,
+  fieldset.address {
+    flex-direction: row;
+  }
+
+  fieldset.user-info label:first-child {
+    max-width: 157px;
+  }
+
+  fieldset.address {
+    flex-wrap: wrap;
+  }
+
+  fieldset.address label:first-child {
+    width: 100%;
+  }
+
+  fieldset.address label {
+    width: 28%;
+  }
+
+  fieldset.address label:nth-child(2) {
+    flex-grow: 999;
+  }
+}

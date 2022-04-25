@@ -1,0 +1,103 @@
+// Set the colors!
+$orange: #f17e00;
+$light-orange: #f59328;
+$purple: #5c135c;
+$light-purple: #800080;
+$text: #838a8f;
+$light-grey: #f0f2f3;
+
+// Set some radius numbers
+$small-radius: 3px;
+$large-radius: 5px;
+
+// Set the fonts
+html {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.857rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.071rem;
+}
+
+p,
+select,
+label,
+::placeholder {
+  color: $text;
+  font-size: 0.7rem;
+}
+
+a {
+  color: $orange;
+}
+
+a:hover {
+  color: $light-orange;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+hr {
+  background: #cad3d8;
+  border: none;
+  height: 1px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1148px;
+  margin: 1rem auto;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1148px) {
+  html {
+    font-size: 18.66px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .col {
+    max-width: 266px;
+  }
+}

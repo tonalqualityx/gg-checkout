@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/css/main.min.css" rel="stylesheet" />
+    <title>GG Checkout</title>
+  </head>
+  <body>
+    <header>
+      <h1>Checkout</h1>
+      <hr />
+    </header>
+
+    <section class="container">
+      <form action="" method="post">
+        <fieldset>
+          <legend>
+            <h2>Create Login</h2>
+            <p>Teachers & students share one login</p>
+          </legend>
+          <label>
+            <span class="accessible-only">Username</span>
+            <input
+              type="text"
+              name="username"
+              placeholder="Username"
+              required
+            />
+          </label>
+          <label>
+            <span class="accessible-only">Enter your password</span>
+            <input
+              type="password"
+              name="password"
+              placeholder="Enter your password"
+              required
+            />
+          </label>
+          <label>
+            <span class="accessible-only">Create a 4-digit PIN</span>
+            <input
+              type="text"
+              name="pin"
+              placeholder="Create a 4-digit PIN"
+              maxlength="4"
+              minlength="4"
+              pattern="\d*"
+              required
+            />
+            <p>PIN is for access to the manage account page</p>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>
+            <h2>Customer Information</h2>
+            <p>For the person/organization paying</p>
+          </legend>
+
+          <fieldset class="user-info">
+            <label>
+              <span class="accessible-only">Your Name</span>
+              <input
+                type="text"
+                name="fullName"
+                placeholder="Your Name"
+                required
+              />
+            </label>
+
+            <label>
+              <span class="accessible-only">Role</span>
+              <select type="text" name="role" required>
+                <option value="Librarian">Librarian</option>
+                <option value="Teacher">Teacher</option>
+                <option value="Administrator">Administrator</option>
+              </select>
+            </label>
+          </fieldset>
+
+          <label>
+            <span class="accessible-only">Your Email</span>
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+          </label>
+
+          <label>
+            <span class="accessible-only">School Name</span>
+            <input
+              type="text"
+              name="schoolName"
+              placeholder="School Name"
+              required
+            />
+          </label>
+
+          <fieldset class="address">
+            <label>
+              <span class="accessible-only">Billing Address</span>
+              <input
+                type="text"
+                name="billingAddress"
+                placeholder="Billing Address"
+                required
+              />
+            </label>
+
+            <label>
+              <span class="accessible-only">City</span>
+              <input type="text" name="city" placeholder="City" required />
+            </label>
+
+            <label>
+              <span class="accessible-only">State</span>
+              <select type="text" name="state" required>
+                <option value="State" disabled selected>State</option>
+                <option value="ca">CA</option>
+                <option value="vt">VT</option>
+                <option value="other">Other</option>
+              </select>
+            </label>
+
+            <label>
+              <span class="accessible-only">ZIP</span>
+              <input
+                type="text"
+                name="zip"
+                placeholder="ZIP"
+                maxlength="5"
+                minlength="5"
+                pattern="\d*"
+                required
+              />
+            </label>
+          </fieldset>
+
+          <p>
+            <a href="#" class="international-toggle">
+              Click here for international address.
+            </a>
+          </p>
+          <fieldset id="international-address" class="hide">
+            <label>
+              <!-- There are certainly other fields for this, but you get the idea... -->
+              <span class="accessible-only">International Fields...</span>
+              <input
+                type="text"
+                name="internationalInfo"
+                placeholder="International Fields..."
+              />
+            </label>
+            <p><a href="#" class="international-toggle hide">Cancel</a></p>
+          </fieldset>
+        </fieldset>
+
+        <fieldset>
+          <legend>
+            <h2>Secure Payment</h2>
+            <p>Choose payment method below</p>
+          </legend>
+
+          <fieldset class="checkboxes">
+            <label class="checked">
+              <input type="radio" name="paymentMethod" value="cc" selected />
+              Credit/Debit Card
+            </label>
+            <label>
+              <input type="radio" name="paymentMethod" value="po" />
+              Purchase Order
+            </label>
+          </fieldset>
+
+          <label>
+            <span class="accessible-only">Card Number</span>
+            <input
+              type="text"
+              name="cardNumber"
+              placeholder="Card Number"
+              maxlength="16"
+              minlength="16"
+              pattern="\d*"
+              required
+            />
+          </label>
+
+          <fieldset class="expiration">
+            <label>
+              <span class="accessible-only">MM</span>
+              <input
+                type="number"
+                name="month"
+                max="12"
+                min="1"
+                placeholder="MM"
+                required
+              />
+            </label>
+
+            <label>
+              <span class="accessible-only">YY</span>
+              <input
+                type="number"
+                name="year"
+                max="2045"
+                min="2022"
+                placeholder="YY"
+                required
+              />
+            </label>
+
+            <label>
+              <span class="accessible-only">CVC</span>
+              <input
+                type="text"
+                name="cvc"
+                placeholder="CVC"
+                maxlength="4"
+                minlength="3"
+                pattern="\d*"
+                required
+              />
+            </label>
+          </fieldset>
+
+          <button type="submit">Pay Now</button>
+        </fieldset>
+      </form>
+
+      <aside class="col">
+        <div class="summary">
+          <h2>Order Summary</h2>
+          <h3>School Yearly Plan</h3>
+          <p>
+            This is a yearly recurring subscription paid once a year at $795.
+            Cancel any time with 1 click on the manage account page. We send
+            email reminders 30 days before each renewal.
+          </p>
+          <select class="product-option">
+            <option value="1">1 Year @ $795 per year</option>
+            <option value="2">2 Years @ $790 per year</option>
+            <option value="5">5 Years @ $780 per year</option>
+          </select>
+          <div class="total">
+            <p>Total</p>
+            <p class="bold">$795</p>
+          </div>
+        </div>
+        <div class="promotion">
+          <div class="bell"><img src="img/bell.png" /></div>
+          <div>
+            <p class="bold">January Promotion Applied</p>
+            <p>
+              9 Months Free Will Be <br />
+              Auto-Added To Plan
+            </p>
+          </div>
+        </div>
+      </aside>
+    </section>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>
