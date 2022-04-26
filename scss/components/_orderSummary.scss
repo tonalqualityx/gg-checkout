@@ -1,9 +1,10 @@
 .summary {
   background: $light-grey;
-  padding: 1rem;
+  padding: 20px;
   border-radius: $large-radius;
   width: 100%;
   margin-top: 1.625rem;
+  line-height: 1.5;
 }
 
 .total {
@@ -12,14 +13,31 @@
 }
 
 .summary h2 {
-  font-weight: 400;
   text-align: center;
   color: $text;
+  margin: 0 0 10px;
+  font-weight: 300;
+}
+
+.summary h3 {
+  margin: 5px 0;
+  font-weight: 400;
 }
 
 .summary h2,
 .summary h3 {
-  font-size: 0.875rem;
+  font-size: 1rem;
+}
+
+.total p {
+  font-size: 1rem;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.summary p.small {
+  margin-top: 0;
+  line-height: 18px;
 }
 
 @media screen and (min-width: 1000px) {

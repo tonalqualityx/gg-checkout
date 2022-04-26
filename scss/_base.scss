@@ -6,6 +6,7 @@ $light-purple: #800080;
 $text: #838a8f;
 $light-grey: #f0f2f3;
 $blue: #2e3840;
+$pink: #deadde;
 
 // Set some radius numbers
 $small-radius: 3px;
@@ -16,7 +17,12 @@ $column-gutter: 28px;
 $gap: 15px;
 
 // Set the fonts
-html {
+html,
+input,
+select,
+option,
+button,
+::placeholder {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 14px;
   box-sizing: border-box;
@@ -31,7 +37,7 @@ html {
 h1 {
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 h2 {

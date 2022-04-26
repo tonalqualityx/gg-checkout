@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link href="/css/main.min.css" rel="stylesheet" />
@@ -127,7 +127,7 @@
               <input type="text" name="city" placeholder="City" required />
             </label>
 
-            <label>
+            <label id="state">
               <span class="accessible-only">State</span>
               <select type="text" name="state" required>
                 <option value="State" disabled selected>State</option>
@@ -137,7 +137,17 @@
               </select>
             </label>
 
-            <label>
+            <label id="province" class="hide">
+              <span class="accessible-only">Province</span>
+              <select type="text" name="province" disabled>
+                <option value="Province" disabled selected>Province</option>
+                <option value="on">Ontario</option>
+                <option value="qc">Quebec</option>
+                <option value="other">Other</option>
+              </select>
+            </label>
+
+            <label id="zip">
               <span class="accessible-only">ZIP</span>
               <input
                 type="text"
@@ -149,25 +159,27 @@
                 required
               />
             </label>
+            <label id="postal-code" class="hide">
+              <span class="accessible-only">Postal Code</span>
+              <input
+                type="text"
+                name="pc"
+                placeholder="Postal Code"
+                maxlength="10"
+                minlength="10"
+                disabled
+              />
+            </label>
           </fieldset>
 
           <p>
             <a href="#" class="international-toggle">
               Click here for international address.
             </a>
+            <a href="#" class="international-toggle hide">
+              Click here for US address.
+            </a>
           </p>
-          <fieldset id="international-address" class="hide">
-            <label>
-              <!-- There are certainly other fields for this, but you get the idea... -->
-              <span class="accessible-only">International Fields...</span>
-              <input
-                type="text"
-                name="internationalInfo"
-                placeholder="International Fields..."
-              />
-            </label>
-            <p><a href="#" class="international-toggle hide">Cancel</a></p>
-          </fieldset>
         </fieldset>
 
         <fieldset>

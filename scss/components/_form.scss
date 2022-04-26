@@ -1,11 +1,13 @@
 // Style the form elements!
 
 form h2 {
-  margin: 5px 0 0;
+  margin: 0;
+  line-height: 1;
 }
 
 form p {
-  margin: 5px 0;
+  margin: 10px 0;
+  line-height: 1rem;
 }
 
 fieldset {
@@ -22,7 +24,6 @@ select {
   height: 50px;
   border-radius: $small-radius;
   border: 1px solid #c9d2d8;
-  padding-left: 16px;
   width: 100%;
   margin: 0;
 }
@@ -32,8 +33,13 @@ select:focus {
   outline-color: $light-orange;
 }
 
+input {
+  padding-left: 16px;
+}
+
 select {
   background-color: white;
+  padding-left: 0.6rem;
 }
 
 .accessible-only {
@@ -54,17 +60,20 @@ fieldset.checkboxes {
 }
 
 .checkboxes label {
+  color: black;
   height: 55px;
   font-weight: bold;
   justify-content: flex-start;
   align-items: center;
   display: flex;
   padding: 16px;
+  border: 2px solid transparent;
 }
 
 .checkboxes label.checked {
   border: 2px solid $orange;
   border-radius: $large-radius;
+  background: white;
 }
 
 .checkboxes i {
@@ -133,15 +142,17 @@ fieldset.expiration label {
     flex-wrap: wrap;
   }
 
-  fieldset.address label:first-child {
+  fieldset.address label:first-child,
+  fieldset.address label#postal-code {
     width: 100%;
   }
 
   fieldset.address label {
-    width: 28%;
+    width: 30%;
   }
 
-  fieldset.address label:nth-child(2) {
+  fieldset.address label#city,
+  fieldset.address label#province {
     flex-grow: 999;
   }
 }
